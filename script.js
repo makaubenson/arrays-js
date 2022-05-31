@@ -99,4 +99,8 @@ console.log(arr2); //['f', 'g', 'h', 'i', 'j'] since it mutates to the new array
 console.log('######## concat() ###############');
 //concat()
 const letters = arr.concat(arr2);
-console.log(letters);
+console.log(letters); //['a', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+//join()
+console.log('######## join() ###############');
+console.log(letters.join('-')); //a-d-e-f-g-h-i-j
