@@ -74,7 +74,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-
+/*
 let arr = ['a', 'b', 'c', 'd', 'e'];
 console.log('######## slice() ###############');
 //slice() method
@@ -104,3 +104,22 @@ console.log(letters); //['a', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 //join()
 console.log('######## join() ###############');
 console.log(letters.join('-')); //a-d-e-f-g-h-i-j
+*/
+
+//at() method
+//Early Version of getting array values
+const arr = [23, 11, 64];
+console.log(arr[0]);
+
+//new version
+console.log(arr.at(0));
+
+//get last element, assuming you dont know the last value
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+//using at()
+console.log(arr.at(-1));
+
+//at() on strings
+console.log('benson'.at(0)); //b
+console.log('benson'.at(-1)); //n

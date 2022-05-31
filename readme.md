@@ -37,3 +37,14 @@
 ## join()
 
 - `console.log(letters.join('-')); //a-d-e-f-g-h-i-j`
+
+## at() method
+
+- Early Version of getting array values
+- `const arr = [23, 11, 64];`
+- `console.log(arr[0]);`
+
+- new version
+- `console.log(arr.at(0));`
+- It also works on strings
+
