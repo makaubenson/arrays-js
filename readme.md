@@ -33,3 +33,7 @@
 - Used to concatinate 2 arrays
 - `const letters = arr.concat(arr2);`
 - `console.log(letters);`
+
+## join()
+
+- `console.log(letters.join('-')); //a-d-e-f-g-h-i-j`
