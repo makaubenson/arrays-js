@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 /*
@@ -104,7 +104,7 @@ console.log(letters); //['a', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 //join()
 console.log('######## join() ###############');
 console.log(letters.join('-')); //a-d-e-f-g-h-i-j
-*/
+
 
 //at() method
 //Early Version of getting array values
@@ -123,3 +123,23 @@ console.log(arr.at(-1));
 //at() on strings
 console.log('benson'.at(0)); //b
 console.log('benson'.at(-1)); //n
+*/
+
+//For Each
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+console.log('########### for of#############');
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`); //get absolute value without signs
+  }
+}
+console.log('########### forEach #############');
+movements.forEach(function (movement) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`); //get absolute value without signs
+  }
+});

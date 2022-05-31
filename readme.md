@@ -48,3 +48,6 @@
 - `console.log(arr.at(0));`
 - It also works on strings
 
+## forEach()
+
+- Loops over the array and through each iteration it executes the callbeck function
