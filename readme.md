@@ -48,6 +48,17 @@
 - `console.log(arr.at(0));`
 - It also works on strings
 
+## for of
+
+- `for (const [i, movement] of movements.entries()) {}`
+- first param, in this case i must be the index, while second param must be the current element
+
 ## forEach()
 
 - Loops over the array and through each iteration it executes the callbeck function
+- As it loops, it parses, `current element of the array`, `index` and `entire array that we are looping`
+- `movements.forEach(function (movement, index, array) {}`
+- The condition of parsing all params is, the order of parsing them:
+- First Must be the `current element`.
+- Second must be `index`.
+- Third must be `array`.
