@@ -62,3 +62,11 @@
 - First Must be the `current element`.
 - Second must be `index`.
 - Third must be `array`.
+
+## when to use forEach()
+
+- Loops over the whole array, it doesnt break
+
+## when to use for of
+
+- if there is need to break out of a loop
