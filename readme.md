@@ -27,3 +27,9 @@
 - `const arr2 = ['j', 'i', 'h', 'g', 'f'];`
 - `console.log(arr2.reverse());`- ['f', 'g', 'h', 'i', 'j']
 - `console.log(arr2);`- `['f', 'g', 'h', 'i', 'j']` since it mutates from `['j', 'i', 'h', 'g', 'f']`
+
+## concat()
+
+- Used to concatinate 2 arrays
+- `const letters = arr.concat(arr2);`
+- `console.log(letters);`

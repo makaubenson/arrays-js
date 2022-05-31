@@ -96,3 +96,7 @@ console.log('######## reverse() ###############');
 const arr2 = ['j', 'i', 'h', 'g', 'f'];
 console.log(arr2.reverse()); //['f', 'g', 'h', 'i', 'j']
 console.log(arr2); //['f', 'g', 'h', 'i', 'j'] since it mutates to the new array
+console.log('######## concat() ###############');
+//concat()
+const letters = arr.concat(arr2);
+console.log(letters);
