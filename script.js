@@ -76,10 +76,17 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
-
+console.log('######## slice() ###############');
 //slice() method
 console.log(arr.slice(2)); //['c', 'd', 'e']
 console.log(arr.slice(2, 4)); //['c', 'd']
 console.log(arr.slice(-2)); //['d', 'e']
 console.log(arr.slice(-1)); //['e']
 console.log(arr.slice()); //['a', 'b', 'c', 'd', 'e']
+
+console.log('######## splice() ###############');
+//splice()
+// console.log(arr.splice(2)); //['c', 'd', 'e']
+// console.log(arr.splice(-1)); //removing last element
+console.log(arr.splice(1, 2)); //picks from caharacter at index 1 and delete 2 elements
+console.log(`Original array has been changed to:`, arr); //['a', 'b']
