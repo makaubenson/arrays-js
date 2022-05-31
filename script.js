@@ -90,3 +90,9 @@ console.log('######## splice() ###############');
 // console.log(arr.splice(-1)); //removing last element
 console.log(arr.splice(1, 2)); //picks from caharacter at index 1 and delete 2 elements
 console.log(`Original array has been changed to:`, arr); //['a', 'b']
+
+console.log('######## reverse() ###############');
+//reverse()
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse()); //['f', 'g', 'h', 'i', 'j']
+console.log(arr2); //['f', 'g', 'h', 'i', 'j'] since it mutates to the new array

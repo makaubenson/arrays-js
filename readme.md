@@ -19,3 +19,11 @@
 - `console.log(arr.splice(2)); //['c', 'd', 'e']`
 - `console.log(`Original array has been changed to:`, arr); //['a', 'b']`
 - `console.log(arr.splice(1, 2)); //picks from caharacter at index 1 and delete 2 elements`
+
+## reverse()
+
+- It mutates the original array
+
+- `const arr2 = ['j', 'i', 'h', 'g', 'f'];`
+- `console.log(arr2.reverse());`- ['f', 'g', 'h', 'i', 'j']
+- `console.log(arr2);`- `['f', 'g', 'h', 'i', 'j']` since it mutates from `['j', 'i', 'h', 'g', 'f']`
