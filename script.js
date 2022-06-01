@@ -75,6 +75,21 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+
+//computing usernames
+const user = 'Stephen Thomas Williams'; //username should be: stw
+const createUsernames = function (user) {
+  const username = user
+    .toLowerCase()
+    .split(' ')
+    .map(function (name) {
+      return name[0];
+    })
+    .join('');
+  return username;
+};
+console.log(createUsernames(user));
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -227,7 +242,7 @@ const checkDogs = function (dogsJulia, dogsKate) {
 checkDogs(julia1, kate1);
 console.log('######## TEST DATA 2 ########');
 checkDogs(julia2, kate2);
-*/
+
 
 //map() method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -256,3 +271,4 @@ const movementsDescriptions = movements.map((mov, i, arr) => {
   }
 });
 console.log(movementsDescriptions);
+*/
