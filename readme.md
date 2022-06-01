@@ -92,5 +92,5 @@
   ` GBP: GBP`
   ` EUR: EUR`
 - here the `key` is same as the `value`.
-
+- `currenciesUnique.forEach(function (value, _, map) {}`
 - Throw away variable(`_`)
