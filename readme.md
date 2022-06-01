@@ -72,3 +72,9 @@
 - if there is need to break out of a loop
 
 ## forEach with Maps and Sets
+
+- `const currencies = new Map([ ['USD', 'United States dollar'], ['EUR', 'Euro'], ['GBP', 'Pound sterling'], ]);`
+
+- `currencies.forEach(function (value, key, map) { console.log(`${key}: ${value}`); });`
+
+- Here on map, the callback function also has three values that it parses.`value, key, map`
