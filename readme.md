@@ -73,8 +73,24 @@
 
 ## forEach with Maps and Sets
 
+#### maps
+
 - `const currencies = new Map([ ['USD', 'United States dollar'], ['EUR', 'Euro'], ['GBP', 'Pound sterling'], ]);`
 
 - `currencies.forEach(function (value, key, map) { console.log(`${key}: ${value}`); });`
 
 - Here on map, the callback function also has three values that it parses.`value, key, map`
+
+#### sets
+
+- `const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']); console.log(currenciesUnique);`
+
+- `currenciesUnique.forEach(function (value, key, map) { console.log(`${key}: ${value}`); });`
+
+- output
+  `USD: USD`
+  ` GBP: GBP`
+  ` EUR: EUR`
+- here the `key` is same as the `value`.
+
+- Throw away variable(`_`)
