@@ -75,7 +75,7 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
-
+/*
 //computing usernames
 //const user = 'Stephen Thomas Williams'; //username should be: stw
 const createUsernames = function (accs) {
@@ -91,9 +91,23 @@ const createUsernames = function (accs) {
   console.log(accounts);
 };
 createUsernames(accounts);
-
+*/
 //filter()
-movements.filter(function (mov, index, arr) {});
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+//using for of to handle the same like above
+const depositsFor = [];
+for (const mov of movements) {
+  if (mov > 0) {
+    depositsFor.push(mov);
+  }
+}
+console.log(depositsFor, `using for of`);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES

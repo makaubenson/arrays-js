@@ -121,6 +121,11 @@
 - returns a new array containing the array elements that passed a specified condition
 - parses 3 arguments `current element, index, array`
 - `movements.filter(function (mov, index, arr) {});`
+- example
+- `const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];`
+- `const deposits = movements.filter(function (mov) { return mov > 0; });`
+- console.log(movements); `[200, 450, -400, 3000, -650, -130, 70, 1300]`
+- console.log(deposits);`[200, 450, 3000, 70, 1300]`
 
 ### reduce()
 
