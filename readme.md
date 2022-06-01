@@ -113,6 +113,7 @@
 
 - loops over an arrays, applys the callback function
 - maps contents of original array to a new array
+- It DOES NOT MUTATE or CHANGE the original array just CREATES a new array.
 
 ### filter()
 

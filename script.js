@@ -228,3 +228,31 @@ checkDogs(julia1, kate1);
 console.log('######## TEST DATA 2 ########');
 checkDogs(julia2, kate2);
 */
+
+//map() method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//task convert them to USD from euros
+const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+
+//arrow function version
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+
+console.log(movements);
+console.log(movementsUSD);
+
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+const movementsDescriptions = movements.map((mov, i, arr) => {
+  if (mov > 0) {
+    return `movement ${i + 1}: You deposited ${mov}`;
+  } else {
+    return `movement ${i + 1}: You withdrew ${Math.abs(mov)}`; //get absolute value without signs
+  }
+});
+console.log(movementsDescriptions);
