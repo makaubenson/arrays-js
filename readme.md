@@ -94,3 +94,16 @@
 - here the `key` is same as the `value`.
 - `currenciesUnique.forEach(function (value, _, map) {}`
 - Throw away variable(`_`)
+
+## insertAdjacentHTML()
+
+- `const html = `<div class="movements__row">
+    <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+    <div class="movements__date">3 days ago</div>
+    <div class="movements__value">${mov}€</div>
+  </div>`;`
+- Inserts html in the required zone
+- accepts two arguments,`first`: area to insert html(`afterbegin`) and `second` the string that should be inserted.
+- html in the context below is the variable containing the string that should be parsed.
+- `insertAdjacentHTML('afterbegin', html);`
+-
