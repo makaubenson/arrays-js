@@ -119,6 +119,8 @@
 
 - used to filter elements from original array that meet a certain condition
 - returns a new array containing the array elements that passed a specified condition
+- parses 3 arguments `current element, index, array`
+- `movements.filter(function (mov, index, arr) {});`
 
 ### reduce()
 

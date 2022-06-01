@@ -92,6 +92,8 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+//filter()
+movements.filter(function (mov, index, arr) {});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
