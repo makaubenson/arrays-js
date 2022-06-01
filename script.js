@@ -77,18 +77,20 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 //computing usernames
-const user = 'Stephen Thomas Williams'; //username should be: stw
-const createUsernames = function (user) {
-  const username = user
-    .toLowerCase()
-    .split(' ')
-    .map(function (name) {
-      return name[0];
-    })
-    .join('');
-  return username;
+//const user = 'Stephen Thomas Williams'; //username should be: stw
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(function (name) {
+        return name[0];
+      })
+      .join('');
+  });
+  console.log(accounts);
 };
-console.log(createUsernames(user));
+createUsernames(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
