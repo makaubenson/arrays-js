@@ -70,3 +70,5 @@
 ## when to use for of
 
 - if there is need to break out of a loop
+
+## forEach with Maps and Sets
