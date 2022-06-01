@@ -106,4 +106,20 @@
 - accepts two arguments,`first`: area to insert html(`afterbegin`) and `second` the string that should be inserted.
 - html in the context below is the variable containing the string that should be parsed.
 - `insertAdjacentHTML('afterbegin', html);`
--
+
+## map , filter , reduce methods
+
+### map()
+
+- loops over an arrays, applys the callback function
+- maps contents of original array to a new array
+
+### filter()
+
+- used to filter elements from original array that meet a certain condition
+- returns a new array containing the array elements that passed a specified condition
+
+### reduce()
+
+- boils down all array elements down to onse single value.(e.g adding elements together)
+- no new array, just the reduced value
