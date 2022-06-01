@@ -18,7 +18,7 @@
 - Mutates the original array.
 - `console.log(arr.splice(2)); //['c', 'd', 'e']`
 - `console.log(`Original array has been changed to:`, arr); //['a', 'b']`
-- `console.log(arr.splice(1, 2)); //picks from caharacter at index 1 and delete 2 elements`
+- `console.log(arr.splice(1, 2)); //picks from character at index 1 and delete 2 elements`
 
 ## reverse()
 
