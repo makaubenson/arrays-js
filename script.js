@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
-
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -75,7 +75,15 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
-/*
+
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce(function (acc, mov) {
+    return acc + mov;
+  }, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account1.movements);
+
 //computing usernames
 //const user = 'Stephen Thomas Williams'; //username should be: stw
 const createUsernames = function (accs) {
@@ -88,10 +96,10 @@ const createUsernames = function (accs) {
       })
       .join('');
   });
-  console.log(accounts);
+  // console.log(accounts);
 };
 createUsernames(accounts);
-
+/*
 //filter()
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const deposits = movements.filter(function (mov) {
@@ -122,10 +130,10 @@ const withdrawals = movements.filter(function (mov) {
   return mov < 0;
 });
 console.log(withdrawals);
-*/
+
 
 //reduce() method
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce(function (
   accumulator,
   currentValue,
@@ -138,6 +146,7 @@ const balance = movements.reduce(function (
 },
 0);
 console.log(`Accumulatated value: ${balance}`);
+*/
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
