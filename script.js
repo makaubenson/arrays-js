@@ -131,7 +131,7 @@ const withdrawals = movements.filter(function (mov) {
 });
 console.log(withdrawals);
 
-
+*/
 //reduce() method
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce(function (
@@ -146,7 +146,13 @@ const balance = movements.reduce(function (
 },
 0);
 console.log(`Accumulatated value: ${balance}`);
-*/
+
+//maximum value
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+console.log(max);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
