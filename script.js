@@ -98,16 +98,30 @@ const deposits = movements.filter(function (mov) {
   return mov > 0;
 });
 console.log(movements);
-console.log(deposits);
+console.log(deposits, `Deposits`);
 
 //using for of to handle the same like above
-const depositsFor = [];
-for (const mov of movements) {
-  if (mov > 0) {
-    depositsFor.push(mov);
-  }
-}
-console.log(depositsFor, `using for of`);
+// const depositsFor = [];
+// for (const mov of movements) {
+//   if (mov > 0) {
+//     depositsFor.push(mov);
+//   }
+// }
+// console.log(depositsFor, `using for of`);
+
+//withdrawals usinf for of
+// const withdrawals = [];
+// for (const mov of movements) {
+//   if (mov < 0) {
+//     withdrawals.push(mov);
+//   }
+// // }
+// console.log(withdrawals, `Withdrawals`);
+//using filter
+const withdrawals = movements.filter(function (mov) {
+  return mov < 0;
+});
+console.log(withdrawals);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
