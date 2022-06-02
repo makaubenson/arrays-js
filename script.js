@@ -126,9 +126,17 @@ console.log(withdrawals);
 
 //reduce() method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-movements.reduce(function (accumulator, currentValue, index, array) {
+const balance = movements.reduce(function (
+  accumulator,
+  currentValue,
+  index,
+  array
+) {
+  console.log(`Iteration ${index} : ${accumulator}`);
   return accumulator + currentValue;
-});
+},
+0);
+console.log(`Accumulatated value: ${balance}`);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
