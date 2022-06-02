@@ -132,6 +132,7 @@ const balance = movements.reduce(function (
   index,
   array
 ) {
+  // console.log(`Iteration ${index} : ${accumulator} and the Array is: ${array}`);
   console.log(`Iteration ${index} : ${accumulator}`);
   return accumulator + currentValue;
 },
