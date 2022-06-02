@@ -130,4 +130,10 @@
 ### reduce()
 
 - boils down all array elements down to onse single value.(e.g adding elements together)
-- no new array, just the reduced value
+- loops over the array and calls the callback function in every iteration
+- no new array, just 1 reduced value
+- In its callback it parses: `accumulator`, `the current element/value`, `the index` and the `entire array`
+- `const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]; ` - Array
+- `movements.reduce(function (accumulator, currentValue, index, array) {`
+- ` return accumulator + currentValue; },x);` x- here represents the current value of the accumulator at the start of the loop.(can be set to any number)
+- `return accumulator + currentValue; },0)`

@@ -91,7 +91,7 @@ const createUsernames = function (accs) {
   console.log(accounts);
 };
 createUsernames(accounts);
-*/
+
 //filter()
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const deposits = movements.filter(function (mov) {
@@ -122,6 +122,13 @@ const withdrawals = movements.filter(function (mov) {
   return mov < 0;
 });
 console.log(withdrawals);
+*/
+
+//reduce() method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+movements.reduce(function (accumulator, currentValue, index, array) {
+  return accumulator + currentValue;
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
