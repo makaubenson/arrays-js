@@ -137,3 +137,4 @@
 - `movements.reduce(function (accumulator, currentValue, index, array) {`
 - ` return accumulator + currentValue; },x);` x- here represents the current value of the accumulator at the start of the loop.(can be set to any number)
 - `return accumulator + currentValue; },0)`
+- The above three functions are very important in js
