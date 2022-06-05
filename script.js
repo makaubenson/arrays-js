@@ -178,9 +178,9 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
-const calcAverageHumanAge = function (ages) {
-  // const humanAges  ages.map();
-};
+// const calcAverageHumanAge = function (ages) {
+//   // const humanAges  ages.map();
+// };
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
