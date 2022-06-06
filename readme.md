@@ -119,6 +119,7 @@
 - `currencies.forEach(function (value, key, map) { console.log(`${key}: ${value}`); });`
 
 - Here on map, the callback function also has three values that it parses.`value, key, map`
+- `map((element, index, array) => { /* ... */ })`
 
 ### filter()
 
