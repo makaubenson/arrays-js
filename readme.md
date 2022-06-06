@@ -114,6 +114,11 @@
 - loops over an arrays, applys the callback function
 - maps contents of original array to a new array
 - It DOES NOT MUTATE or CHANGE the original array just CREATES a new array.
+- `const currencies = new Map([ ['USD', 'United States dollar'], ['EUR', 'Euro'], ['GBP', 'Pound sterling'], ]);`
+
+- `currencies.forEach(function (value, key, map) { console.log(`${key}: ${value}`); });`
+
+- Here on map, the callback function also has three values that it parses.`value, key, map`
 
 ### filter()
 
