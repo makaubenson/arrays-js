@@ -9,7 +9,7 @@ const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
-  pin: 1111,
+  pin: 1111, 
 };
 
 const account2 = {
@@ -178,9 +178,24 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
-// const calcAverageHumanAge = function (ages) {
-//   // const humanAges  ages.map();
-// };
+const calcAverageHumanAge = function (ages) {
+  const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + age *4);
+// console.log(humanAges);
+//filter dogs atleast 18 years old
+const adults= humanAges.filter(age => age >= 18);
+// console.log(humanAges);
+// console.log(adults);
+
+//  const average = adults.reduce((acc,age) => acc + age,0) / adults.length;
+ const average = adults.reduce((acc,age,i,arr) => acc + age / arr.length,0);
+return average;
+};
+
+
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+console.log(avg1,avg2);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
