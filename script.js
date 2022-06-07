@@ -84,6 +84,16 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function(movements){
+const incomes = movements.filter(mov => mov > 0).reduce((acc,mov) => acc + mov, 0);
+labelSumIn.textContent = `${incomes}€`;
+
+const expense = movements.filter(mov => mov < 0).reduce((acc,mov) => acc + mov, 0);
+labelSumOut.textContent = `${expense}€`;
+}
+calcDisplaySummary(account1.movements);
+
+
 //computing usernames
 //const user = 'Stephen Thomas Williams'; //username should be: stw
 const createUsernames = function (accs) {
