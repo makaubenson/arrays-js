@@ -146,3 +146,9 @@
 - The above three functions are very important in js
 
 - `NOTE: It is Bad Practice to chain js methods that mutate the original array e.g splice(), reverse() methods `
+
+### find() method
+- used to retrive one element of an array based on a condition.
+- It accepts a condition and a callback which is called as the method loops over the array.
+- Find method needs a classbcak function that returns a boolean.
+- It `does not return a new array` but the first element of an array that meets the specified condition.
