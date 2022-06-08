@@ -128,8 +128,14 @@ console.log(movements);
 console.log(firstWithdrawal);
 
 console.log(accounts);
-const account = accounts.find(acc => acc.owner = 'Jessica Davis');
-console.log(account);
+// const account = accounts.find(acc => acc.owner = 'Jessica Davis');
+// console.log(account);
+for(const account of accounts){
+  // console.log(owner, movements);
+if(account.owner == 'Jessica Davis'){
+  console.log(account);
+}
+}
 /*
 //filter()
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
