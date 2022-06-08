@@ -153,3 +153,5 @@
 - Find method needs a classbcak function that returns a boolean.
 - It `does not return a new array` but the first element of an array that meets the specified condition.
 This method returns `undefined` if the condition is not met. 
+- `blur()` can be used to make input fields lose `focus`.
+- `Math.abs()` -Returns the absolute value of a number (the value without regard to whether it is positive or negative). For example, the absolute value of -5 is the same as the absolute value of 5.
