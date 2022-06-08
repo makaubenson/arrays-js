@@ -148,10 +148,11 @@
 - `NOTE: It is Bad Practice to chain js methods that mutate the original array e.g splice(), reverse() methods `
 
 ### find() method
+
 - used to retrive one element of an array based on a condition.
 - It accepts a condition and a callback which is called as the method loops over the array.
 - Find method needs a classbcak function that returns a boolean.
 - It `does not return a new array` but the first element of an array that meets the specified condition.
-This method returns `undefined` if the condition is not met. 
+  This method returns `undefined` if the condition is not met.
 - `blur()` can be used to make input fields lose `focus`.
 - `Math.abs()` -Returns the absolute value of a number (the value without regard to whether it is positive or negative). For example, the absolute value of -5 is the same as the absolute value of 5.

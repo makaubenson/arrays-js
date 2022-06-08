@@ -75,11 +75,10 @@ const displayMovements = function (movements) {
   });
 };
 
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce(function (acc, mov) {
-    return acc + mov;
-  }, 0);
-  labelBalance.textContent = `${balance}€`;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+
+  labelBalance.textContent = `${acc.balance}€`;
 };
 
 const calcDisplaySummary = function (acc) {
@@ -120,6 +119,14 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+const updateUI = function (acc) {
+  //display Movements
+  displayMovements(acc.movements);
+  //display Balance
+  calcDisplayBalance(acc);
+  //display Summary
+  calcDisplaySummary(acc);
+};
 //Implimenting Login
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
@@ -139,16 +146,31 @@ btnLogin.addEventListener('click', function (e) {
     //clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
-    //display Movements
-    displayMovements(currentAccount.movements);
-
-    //display Balance
-    calcDisplayBalance(currentAccount.movements);
-    //display Summary
-    calcDisplaySummary(currentAccount);
+    //Updating User Interface Values
+    updateUI(currentAccount);
   }
 });
-
+//Implimenting Transfer
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  inputTransferAmount.value = inputTransferTo.value = '';
+  if (
+    amount > 0 &&
+    receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
+    //doing transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+    //Updating User Interface Values
+    updateUI(currentAccount);
+  }
+});
 /*
 //Chaining Methods - PIPELINE
 // const eurToUsd = 1.1;
