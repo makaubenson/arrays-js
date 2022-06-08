@@ -116,27 +116,49 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+//Implimenting Login
+let currentAccount;
+btnLogin.addEventListener('click',function(e){
+  e.preventDefault();//prevent default bevahior
+  // console.log('LOGIN');
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+console.log(currentAccount);
+//use nullish coalescing operator
+if(currentAccount?.pin === Number(inputLoginPin.value)){
+ //Display UI and Welcome Message
+ labelWelcome.textContent = `Welcome Back, ${currentAccount.owner.split(' ')[0]}`
+ containerApp.style.opacity = 100;
+ //display Movement
+ //display Balance
+ //display Summary
+}
+});
+
+
+/*
 //Chaining Methods - PIPELINE
-const eurToUsd = 1.1;
-const totalDepositsUSD = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc,mov) => acc + mov,0);
+// const eurToUsd = 1.1;
+// const totalDepositsUSD = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc,mov) => acc + mov,0);
 // console.log(totalDepositsUSD);
 
 
 //find() method
-const firstWithdrawal = movements.find(mov => mov < 0);
-console.log(movements);
-console.log(firstWithdrawal);
+// const firstWithdrawal = movements.find(mov => mov < 0);
+// console.log(movements);
+// console.log(firstWithdrawal);
 
-console.log(accounts);
+// console.log(accounts);
 // const account = accounts.find(acc => acc.owner = 'Jessica Davis');
 // console.log(account);
-for(const account of accounts){
-  // console.log(owner, movements);
-if(account.owner == 'Jessica Davis'){
-  console.log(account);
-}
-}
-/*
+
+//for of loop way
+// for(const account of accounts){
+//   // console.log(owner, movements);
+// if(account.owner == 'Jessica Davis'){
+//   console.log(account);
+// }
+// }
+
 //filter()
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const deposits = movements.filter(function (mov) {

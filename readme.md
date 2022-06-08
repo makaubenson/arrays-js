@@ -152,3 +152,4 @@
 - It accepts a condition and a callback which is called as the method loops over the array.
 - Find method needs a classbcak function that returns a boolean.
 - It `does not return a new array` but the first element of an array that meets the specified condition.
+This method returns `undefined` if the condition is not met. 
