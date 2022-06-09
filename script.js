@@ -226,7 +226,6 @@ const withdrawals = movements.filter(function (mov) {
 });
 console.log(withdrawals);
 
-
 //reduce() method
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce(function (
@@ -272,7 +271,6 @@ TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
 TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
-
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + age *4);
 // console.log(humanAges);
@@ -285,7 +283,6 @@ const adults= humanAges.filter(age => age >= 18);
  const average = adults.reduce((acc,age,i,arr) => acc + age / arr.length,0);
 return average;
 };
-
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
@@ -328,7 +325,6 @@ console.log(letters); //['a', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 //join()
 console.log('######## join() ###############');
 console.log(letters.join('-')); //a-d-e-f-g-h-i-j
-
 
 //at() method
 //Early Version of getting array values
@@ -393,7 +389,6 @@ currenciesUnique.forEach(function (value, _, map) {
 
 ///////////////////////////////////////
 // Coding Challenge #1
-
 /* 
 Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners about their dog's age, 
 and stored the data into an array (one array for each). For now, they are just interested in knowing whether a dog is an adult or a puppy.
