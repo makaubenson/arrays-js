@@ -151,8 +151,13 @@
 
 - used to retrive one element of an array based on a condition.
 - It accepts a condition and a callback which is called as the method loops over the array.
-- Find method needs a classbcak function that returns a boolean.
+- Find method needs a callback function that returns a boolean.
 - It `does not return a new array` but the first element of an array that meets the specified condition.
   This method returns `undefined` if the condition is not met.
 - `blur()` can be used to make input fields lose `focus`.
 - `Math.abs()` -Returns the absolute value of a number (the value without regard to whether it is positive or negative). For example, the absolute value of -5 is the same as the absolute value of 5.
+
+### The findindex() Method
+
+- Works closely the same as the `find()` method though `findindex()` returns the `index` of the found element.
+- `find()` returns the one element based on the condition parsed, `findindex()` returns the index of the element retrieved.
