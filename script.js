@@ -172,8 +172,13 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-
-
+//Deletion Functinality
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('Delete');
+});
+/*
+//Chaining Methods - PIPELINE
 // const eurToUsd = 1.1;
 // const totalDepositsUSD = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc,mov) => acc + mov,0);
 // console.log(totalDepositsUSD);
