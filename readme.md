@@ -160,4 +160,4 @@
 ### The findindex() Method
 
 - Works closely the same as the `find()` method though `findindex()` returns the `index` of the found element.
-- `find()` returns the one element based on the condition parsed, `findindex()` returns the index of the element retrieved.
+- `find() method` returns the one element based on the condition parsed, `findindex()` returns the index of the element retrieved.
