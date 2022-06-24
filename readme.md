@@ -138,7 +138,7 @@
 
 ### reduce()
 
-- boils down all array elements down to onse single value.(e.g adding elements together)
+- boils down all array elements down to one single value.(e.g adding elements together)
 - loops over the array and calls the callback function in every iteration
 - no new array, just 1 reduced value
 - In its callback it parses: `accumulator`, `the current element/value`, `the index` and the `entire array`
