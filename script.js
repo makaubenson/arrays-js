@@ -171,7 +171,24 @@ btnTransfer.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
 });
-
+//The findIndex() METHOD
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  // console.log('Delete');
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(function (acc) {
+      return acc.username === currentAccount.username;
+    });
+    // console.log(index);
+    //Delete Account
+    accounts.splice(index, 1);
+    //Hide UI
+    containerApp.style.opacity = 0;
+  }
+});
 /*
 //Chaining Methods - PIPELINE
 // const eurToUsd = 1.1;
@@ -499,16 +516,3 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1,avg2);
 */
-
-//The FindINDEX METHOD
-btnClose.addEventListener('click', function (e) {
-  e.preventDefault();
-  // console.log('Delete');
-  if (
-    inputCloseUsername.value === currentAccount.username &&
-    Number(inputClosePin.value) === currentAccount.pin
-  ) {
-    const index  = accounts.findIndex(acc)
-    accounts.splice(index, 1);
-  }
-});
