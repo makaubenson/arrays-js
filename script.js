@@ -172,11 +172,6 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-//Deletion Functinality
-btnClose.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log('Delete');
-});
 /*
 //Chaining Methods - PIPELINE
 // const eurToUsd = 1.1;
@@ -506,3 +501,14 @@ console.log(avg1,avg2);
 */
 
 //The FindINDEX METHOD
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  // console.log('Delete');
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index  = accounts.findIndex(acc)
+    accounts.splice(index, 1);
+  }
+});
