@@ -189,7 +189,7 @@ btnClose.addEventListener('click', function (e) {
     //Hide UI
     containerApp.style.opacity = 0;
   }
-  inputCloseUsername.value = inputClosePin.value = ''; 
+  inputCloseUsername.value = inputClosePin.value = '';
 });
 /*
 //Chaining Methods - PIPELINE
@@ -518,3 +518,7 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1,avg2);
 */
+
+//flat() and flatMap() methods
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());

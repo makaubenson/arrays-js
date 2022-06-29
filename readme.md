@@ -169,3 +169,10 @@
 
 - Both find() and findIndex() methods get access of the current index and the entire array.
 - These functions were introduced in ES6 thus they cant work in old browsers.
+
+### flat() and flatMap() Methods
+
+- were introduced in ES2019, Thus they wont work in supper old browsers.
+- The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+- `const arr = [[1, 2, 3], [4, 5, 6], 7, 8];`
+- `console.log(arr.flat());` - output -`[1, 2, 3, 4, 5, 6, 7, 8]`
