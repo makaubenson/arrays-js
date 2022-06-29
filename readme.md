@@ -164,3 +164,8 @@
 
 - Works closely the same as the `find()` method though `findindex()` returns the `index` of the found element.
 - `find() method` returns the one element based on the condition parsed, `findindex()` returns the index of the element retrieved.
+
+#### Note
+
+- Both find() and findIndex() methods get access of the current index and the entire array.
+- These functions were introduced in ES6 thus they cant work in old browsers.

@@ -175,6 +175,7 @@ btnTransfer.addEventListener('click', function (e) {
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
   // console.log('Delete');
+
   if (
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value) === currentAccount.pin
@@ -188,6 +189,7 @@ btnClose.addEventListener('click', function (e) {
     //Hide UI
     containerApp.style.opacity = 0;
   }
+  inputCloseUsername.value = inputClosePin.value = ''; 
 });
 /*
 //Chaining Methods - PIPELINE
