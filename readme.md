@@ -172,7 +172,19 @@
 
 ### flat() and flatMap() Methods
 
-- were introduced in ES2019, Thus they wont work in supper old browsers.
+- These methods were introduced in ES2019, Thus they wont work in supper old browsers.
 - The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+- The flat method only goes one level deep by default.
 - `const arr = [[1, 2, 3], [4, 5, 6], 7, 8];`
 - `console.log(arr.flat());` - output -`[1, 2, 3, 4, 5, 6, 7, 8]`
+- `console.log(arr.flat(1));` - output -`[1, 2, 3, 4, 5, 6, 7, 8]`
+- The flat method accepts the depth argument which specifies how deep the method should go to flatten the sub -arrays.
+
+- `const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];`
+- `console.log(arrDeep.flat());`- Output `[Array(2), 3, 4, Array(2), 7, 8]`
+
+##### specify depth argument
+
+- after specifying depth argument the flat method flattens all sub arrays on the same depth level as the one specified in the flat method. ` e.g flat(3)`
+- `console.log(arrDeep.flat(2)); //[1, 2, 3, 4, 5, 6, 7, 8]`

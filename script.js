@@ -521,4 +521,9 @@ console.log(avg1,avg2);
 
 //flat() and flatMap() methods
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
-console.log(arr.flat());
+console.log(arr.flat()); // output -`[1, 2, 3, 4, 5, 6, 7, 8]`
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat()); //[Array(2), 3, 4, Array(2), 7, 8]
+//specify depth argument
+console.log(arrDeep.flat(2)); //[1, 2, 3, 4, 5, 6, 7, 8]
