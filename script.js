@@ -559,6 +559,12 @@ console.log(anyDeposits);
 console.log(movements.every(mov => mov > 0)); //false
 console.log(account4.movements.every(mov => mov > 0)); //true
 
+//separate callback
+const deposit = mov => mov < 0;
+console.log(movements.some(deposit)); //true
+console.log(movements.every(deposit)); //false
+console.log(movements.filter(deposit)); //(3) [-400, -650, -130]
+
 /*
 //flat() and flatMap() methods
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
