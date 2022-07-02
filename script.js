@@ -554,6 +554,11 @@ const anyDeposits = movements.some(function (mov) {
   return mov > 0;
 });
 console.log(anyDeposits);
+
+//every()
+console.log(movements.every(mov => mov > 0)); //false
+console.log(account4.movements.every(mov => mov > 0)); //true
+
 /*
 //flat() and flatMap() methods
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];

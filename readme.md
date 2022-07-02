@@ -209,3 +209,8 @@
 - `console.log(anyDeposits);` - `output: true`
 
 ### every() methods
+
+- The every() method tests whether all elements in the array pass the test implemented by the provided callback function.
+- It returns a Boolean value.
+- `console.log(movements.every(mov => mov > 0));`- Output: `false` since not all movements are deposits
+- `console.log(account4.movements.every(mov => mov > 0));` Output: `true` since account4 has positive movements alone, no negative ones.
