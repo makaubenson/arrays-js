@@ -170,7 +170,7 @@
 - Both find() and findIndex() methods get access of the current index and the entire array.
 - These functions were introduced in ES6 thus they cant work in old browsers.
 
-### flat() and flatMap() Methods
+### flat()
 
 - These methods were introduced in ES2019, Thus they wont work in supper old browsers.
 - The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
@@ -189,3 +189,9 @@
 - The depth level specifies how deep a nested array structure should be flattened. Defaults to 1.
 - after specifying depth argument the flat method flattens all sub arrays on the same depth level as the one specified in the flat method. ` e.g flat(3)`
 - `console.log(arrDeep.flat(2)); //[1, 2, 3, 4, 5, 6, 7, 8]`
+
+### flatMap() Method
+
+- Since using `map()` method and flattening the result is a common use case, thus for that reason `flatMap()` was introduced.
+- flatMap() combines ``map` and `flat` method into one function for perfomance functions.
+- sample code is in script.js

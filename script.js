@@ -528,13 +528,37 @@ console.log(arrDeep.flat()); //[Array(2), 3, 4, Array(2), 7, 8]
 //specify depth argument
 console.log(arrDeep.flat(2)); //[1, 2, 3, 4, 5, 6, 7, 8]
 
-const accountMovements = accounts.map(function (acc) {
-  return acc.movements;
-});
-console.log(accountMovements);
-const allMovements = accountMovements.flat();
-console.log(allMovements);
-const overalBalance = allMovements.reduce(function (accumulator, movement) {
-  return accumulator + movement;
-}, 0);
+//flat() method
+// const accountMovements = accounts.map(function (acc) {
+//   return acc.movements;
+// });
+// console.log(accountMovements);
+
+// const allMovements = accountMovements.flat();
+// console.log(allMovements);
+// const overalBalance = allMovements.reduce(function (accumulator, movement) {
+//   return accumulator + movement;
+// }, 0);
+// console.log(overalBalance);
+
+//overal balance with methods chaining
+//flat() method use case
+const overalBalance = accounts
+  .map(function (acc) {
+    return acc.movements;
+  })
+  .flat()
+  .reduce(function (accumulator, movement) {
+    return accumulator + movement;
+  }, 0);
 console.log(overalBalance);
+
+//flatMap() use case
+const overalBalance1 = accounts
+  .flatMap(function (acc) {
+    return acc.movements;
+  })
+  .reduce(function (accumulator, movement) {
+    return accumulator + movement;
+  }, 0);
+console.log(overalBalance1);
