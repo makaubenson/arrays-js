@@ -171,6 +171,28 @@ btnTransfer.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
 });
+
+//borrow loan (use some() method)
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  //get the requested loan amount
+  const amount = Number(inputLoanAmount.value);
+  //condition
+  if (
+    amount > 0 &&
+    currentAccount.movements.some(function (mov) {
+      return mov >= amount * 0.1;
+    })
+  ) {
+    //add the movement to the array of movements for the current user
+    currentAccount.movements.push(amount);
+    //update UI
+    updateUI(currentAccount);
+  }
+  //clear input value
+  inputLoanAmount.value = '';
+});
+
 //The findIndex() METHOD
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
