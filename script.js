@@ -619,8 +619,8 @@ console.log(owners.sort()); //['Adam', 'Jonas', 'Martha', 'Zach']
 console.log(movements); // [200, 450, -400, 3000, -650, -130, 70, 1300]
 console.log(movements.sort()); //[-130, -400, -650, 1300, 200, 3000, 450, 70]
 //to handle the error in sorting numbers, we pass the compare callback function in sort method
-//return < 0, A,B
-//return > 0, B,A
+//return < 0, A,B (KEEP ORDER)
+//return > 0, B,A (SWITCH ORDER)
 movements.sort(function (a, b) {
   if (a > b) return 1;
   if (b > a) return -1;
