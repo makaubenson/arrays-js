@@ -195,3 +195,4 @@
 - Since using `map()` method and flattening the result is a common use case, thus for that reason `flatMap()` was introduced.
 - flatMap() combines ``map` and `flat` method into one function for perfomance functions.
 - sample code is in script.js
+- ### Note: flatMap() only goes to 1 level of depth, if the need be for several levels of depth, then flat() method is the way.
