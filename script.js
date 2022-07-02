@@ -539,7 +539,7 @@ const calcAverageHumanAge = ages => ages.map(age => age <= 2 ? 2 * age : 16 + ag
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1,avg2);
-*/
+
 
 //some() and every() methods
 console.log(movements);
@@ -565,7 +565,7 @@ console.log(movements.some(deposit)); //true
 console.log(movements.every(deposit)); //false
 console.log(movements.filter(deposit)); //(3) [-400, -650, -130]
 
-/*
+
 //flat() and flatMap() methods
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arr.flat()); // output -`[1, 2, 3, 4, 5, 6, 7, 8]`
@@ -610,3 +610,19 @@ const overalBalance1 = accounts
   }, 0);
 console.log(overalBalance1);
 */
+
+//sorting arrays
+//Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort()); //['Adam', 'Jonas', 'Martha', 'Zach']
+//numbers
+console.log(movements); // [200, 450, -400, 3000, -650, -130, 70, 1300]
+console.log(movements.sort()); //[-130, -400, -650, 1300, 200, 3000, 450, 70]
+//to handle the error in sorting numbers, we pass the compare callback function in sort method
+//return < 0, A,B
+//return > 0, B,A
+movements.sort(function (a, b) {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements); // [-650, -400, -130, 70, 200, 450, 1300, 3000]

@@ -214,3 +214,25 @@
 - It returns a Boolean value.
 - `console.log(movements.every(mov => mov > 0));`- Output: `false` since not all movements are deposits
 - `console.log(account4.movements.every(mov => mov > 0));` Output: `true` since account4 has positive movements alone, no negative ones.
+
+## Sorting Arrays
+
+- The sort() method sorts the elements of an array in place and returns the sorted array.
+- The default sort order is ascending.
+
+##### strings
+
+- `const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];`
+- `console.log(owners.sort());`Output: `['Adam', 'Jonas', 'Martha', 'Zach']`
+- It mutates the original array. i.e,if after sorting your print the original array, it will print the mutated one.
+- ` console.log(owners);`Output: `['Adam', 'Jonas', 'Martha', 'Zach']`
+
+##### numbers
+
+- `console.log(movements); // [200, 450, -400, 3000, -650, -130, 70, 1300]`
+- `console.log(movements.sort()); //[-130, -400, -650, 1300, 200, 3000, 450, 70]`
+- The reason for the wierd output while sorting numbers is, the sort() method sorts based on strings. (i.e `it converts everything to string then sorts the values`)
+- To fix the error in sorting numbers, we pass the compare callback function in sort method
+- `return < 0, A,B` `return > 0, B,A`
+- `movements.sort(function (a, b) { if (a > b) return 1; if (b > a) return -1; });`
+- `console.log(movements);` -Output `[-650, -400, -130, 70, 200, 450, 1300, 3000]`
