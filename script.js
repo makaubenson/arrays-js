@@ -519,6 +519,20 @@ const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1,avg2);
 */
 
+//some() and every() methods
+console.log(movements);
+//includes methods checks for equality of the value being evaluated with that in the array
+console.log(movements.includes(-130));
+
+//some()
+//some() executes based on a condition
+// const anyDeposits = movements.some(mov => mov > 0);
+//OR
+const anyDeposits = movements.some(function (mov) {
+  return mov > 0;
+});
+console.log(anyDeposits);
+/*
 //flat() and flatMap() methods
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arr.flat()); // output -`[1, 2, 3, 4, 5, 6, 7, 8]`
@@ -562,3 +576,4 @@ const overalBalance1 = accounts
     return accumulator + movement;
   }, 0);
 console.log(overalBalance1);
+*/

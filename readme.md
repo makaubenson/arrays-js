@@ -196,3 +196,16 @@
 - flatMap() combines ``map` and `flat` method into one function for perfomance functions.
 - sample code is in script.js
 - ### Note: flatMap() only goes to 1 level of depth, if the need be for several levels of depth, then flat() method is the way.
+
+### some()
+
+- The `some() method` tests whether at least one element in the array passes the test implemented by the provided callback function.
+- It returns `true` if, in the array, it finds an element for which the provided function returns true; otherwise it returns `false`.
+- It doesn't modify the array.
+- Example
+- `const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];`
+- `const anyDeposits = movements.some(function (mov) { return mov > 0; });`
+- Here the callback checks if there is any movement > 0
+- `console.log(anyDeposits);` - `output: true`
+
+### every() methods
