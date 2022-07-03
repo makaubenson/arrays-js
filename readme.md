@@ -233,7 +233,9 @@
 - `console.log(movements.sort()); //[-130, -400, -650, 1300, 200, 3000, 450, 70]`
 - The reason for the wierd output while sorting numbers is, the sort() method sorts based on strings. (i.e `it converts everything to string then sorts the values`)
 - To fix the error in sorting numbers, we pass the compare callback function in sort method
-- `if return < 0, then A,B (keep order)` `if return > 0, then B,A (switch order)`
-- `movements.sort(function (a, b) { if (a > b) return 1; if (b > a) return -1; });`
+- `if return < 0, then A,B (keep order)`
+- `if return > 0, then B,A (switch order)`
+- `movements.sort(function (a, b) { if (a > b) return 1;`
+- ` if (b > a) return -1; });`
 - a,b are 2 subsequent values in an array.
 - `console.log(movements);` -Output `[-650, -400, -130, 70, 200, 450, 1300, 3000]`
