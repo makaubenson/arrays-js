@@ -609,7 +609,7 @@ const overalBalance1 = accounts
     return accumulator + movement;
   }, 0);
 console.log(overalBalance1);
-*/
+
 
 //sorting arrays
 //Strings
@@ -626,3 +626,4 @@ movements.sort(function (a, b) {
   if (b > a) return -1;
 });
 console.log(movements); // [-650, -400, -130, 70, 200, 450, 1300, 3000]
+*/
