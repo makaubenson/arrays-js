@@ -264,3 +264,26 @@
 - `const y = Array.from({ length: 7 }, () => 1);`
 - `console.log(y);//[1, 1, 1, 1, 1, 1, 1]`
 - The call back function in this method works as that of the `map()` method.
+
+### Which Array Method To Use
+
+- Ask what you want with the method?
+
+#### To Mutate Original Array
+
+##### Add to Original Array
+
+- push() - end
+- unshift() - start
+
+##### Remove From Original Array
+
+- pop() - end
+- shift() - start
+- splice() -any
+
+##### Others
+
+- reverse()
+- sort()
+- fill()
