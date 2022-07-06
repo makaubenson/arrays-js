@@ -310,3 +310,50 @@
 
 - flat()
 - flatMap()
+
+#### Want an Array Index
+
+##### Based on Value
+
+- indexOf()
+
+##### Based on test condition
+
+- findIndex()
+
+#### Want an Array Element
+
+##### Based on test condition
+
+- find()
+
+#### Know if an array includes a certain element
+
+- These methods return boolean value
+
+##### Based on value
+
+- includes()
+
+##### Based on test condition
+
+- some()
+- every()
+
+#### Transform an array into string
+
+##### Based on separator string
+
+- join()
+
+#### To transform array to value
+
+##### Based on Accumulator
+
+- reduce()
+
+#### To just loop over array
+
+##### Based on Callback
+
+- forEach()
