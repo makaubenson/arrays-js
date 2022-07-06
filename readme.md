@@ -263,3 +263,4 @@
 - The `Array.from()` static method creates a new, shallow-copied Array instance from an iterable or array-like object.
 - `const y = Array.from({ length: 7 }, () => 1);`
 - `console.log(y);//[1, 1, 1, 1, 1, 1, 1]`
+- The call back function in this method works as that of the `map()` method.
