@@ -251,3 +251,8 @@
 - `console.log(x); // [1, 1, 1, 1, 1, 1, 1]`
 - The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length).
 - It returns the modified array.
+
+##### fill use case
+
+- `x.fill(1, 3); //[empty × 3, 1, 1, 1, 1]`
+- fills 1 in the array but from index 3

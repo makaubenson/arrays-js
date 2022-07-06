@@ -655,13 +655,14 @@ console.log(movements); //[3000, 1300, 450, 200, 70, -130, -400, -650]
 */
 
 //How to Programmatically Create And Fill Arrays
-console.log([1, 2, 3, 4, 5, 6]);
-console.log(new Array(1, 2, 3, 4, 5, 6));
+console.log([1, 2, 3, 4, 5, 6, 7]);
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
 const x = new Array(7); //creates an array with 7 empty elements. and It contains nothing
 console.log(x);
 
 // x.map(() => 5);
 // console.log(x);
-x.fill(1);
-console.log(x); // [1, 1, 1, 1, 1, 1, 1]
+x.fill(1); // [1, 1, 1, 1, 1, 1, 1]
+
+console.log(x);
