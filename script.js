@@ -665,5 +665,5 @@ console.log(x);
 // console.log(x);
 x.fill(1); // [1, 1, 1, 1, 1, 1, 1]
 // x.fill(1, 3); //[empty × 3, 1, 1, 1, 1]
-
+x.fill(1, 3, 5); //[empty × 3, 1, 1, empty × 2]
 console.log(x);
