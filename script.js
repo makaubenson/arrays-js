@@ -728,3 +728,24 @@ const { deposits, withdrawals } = accounts
 console.log(deposits, withdrawals);
 
 //4. Create function to convert string into Title Case
+//This is a nice title
+const convertTitleCase = function (title) {
+  const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(' ');
+  return titleCase;
+};
+console.log(convertTitleCase('this is a nice title'));
+console.log(
+  convertTitleCase(
+    'create function to convert STRING into Title Case but not sentence case with a function'
+  )
+);
+console.log(
+  convertTitleCase('create function to convert STRING into Title CASE')
+);
