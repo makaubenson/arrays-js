@@ -621,7 +621,7 @@ const overalBalance1 = accounts
   }, 0);
 console.log(overalBalance1);
 
-*/
+
 
 //sorting arrays
 //Strings
@@ -652,3 +652,16 @@ console.log(movements); // [-650, -400, -130, 70, 200, 450, 1300, 3000]
 //arrow function
 movements.sort((a, b) => b - a);
 console.log(movements); //[3000, 1300, 450, 200, 70, -130, -400, -650]
+*/
+
+//How to Programmatically Create And Fill Arrays
+console.log([1, 2, 3, 4, 5, 6]);
+console.log(new Array(1, 2, 3, 4, 5, 6));
+
+const x = new Array(7); //creates an array with 7 empty elements. and It contains nothing
+console.log(x);
+
+// x.map(() => 5);
+// console.log(x);
+x.fill(1);
+console.log(x); // [1, 1, 1, 1, 1, 1, 1]

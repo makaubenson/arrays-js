@@ -239,3 +239,15 @@
 - ` if (b > a) return -1; });`
 - a,b are 2 subsequent values in an array.
 - `console.log(movements);` -Output `[-650, -400, -130, 70, 200, 450, 1300, 3000]`
+
+### How to Programmatically Create And Fill Arrays
+
+- `console.log([1, 2, 3, 4, 5, 6]);`
+- `console.log(new Array(1, 2, 3, 4, 5, 6));`
+
+- `const x = new Array(7);`- creates an array with 7 empty elements. and It contains nothing
+
+- `x.fill(1);`
+- `console.log(x); // [1, 1, 1, 1, 1, 1, 1]`
+- The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length).
+- It returns the modified array.
