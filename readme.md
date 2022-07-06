@@ -287,3 +287,26 @@
 - reverse()
 - sort()
 - fill()
+
+#### Want a New Array
+
+##### Computed from original
+
+- map()
+
+##### filtered using condition
+
+- filter()
+
+##### portion of the original
+
+- slice()
+
+##### adding original to other
+
+- concat()
+
+##### flattening the original
+
+- flat()
+- flatMap()
