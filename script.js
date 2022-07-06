@@ -655,8 +655,9 @@ console.log(movements); //[3000, 1300, 450, 200, 70, -130, -400, -650]
 */
 
 //How to Programmatically Create And Fill Arrays
-console.log([1, 2, 3, 4, 5, 6, 7]);
-console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log([1, 2, 3, 4, 5, 6, 7]);
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
 const x = new Array(7); //creates an array with 7 empty elements. and It contains nothing
 console.log(x);
@@ -666,5 +667,9 @@ console.log(x);
 x.fill(1); // [1, 1, 1, 1, 1, 1, 1]
 // x.fill(1, 3); //[empty × 3, 1, 1, 1, 1]
 // x.fill(1, 3, 5); //[empty × 3, 1, 1, empty × 2]
-x.fill(23, 4, 6); // [1, 1, 1, 1, 23, 23, 1]
-console.log(x);
+arr.fill(23, 4, 6); // [1, 1, 1, 1, 23, 23, 1]
+console.log(arr);
+
+//re-creating arrays from other arrays (Array.from() function)
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y); //[1, 1, 1, 1, 1, 1, 1]
