@@ -664,5 +664,6 @@ console.log(x);
 // x.map(() => 5);
 // console.log(x);
 x.fill(1); // [1, 1, 1, 1, 1, 1, 1]
+// x.fill(1, 3); //[empty × 3, 1, 1, 1, 1]
 
 console.log(x);
