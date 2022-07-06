@@ -652,7 +652,7 @@ console.log(movements); // [-650, -400, -130, 70, 200, 450, 1300, 3000]
 //arrow function
 movements.sort((a, b) => b - a);
 console.log(movements); //[3000, 1300, 450, 200, 70, -130, -400, -650]
-*/
+
 
 //How to Programmatically Create And Fill Arrays
 const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -685,3 +685,46 @@ labelBalance.addEventListener('click', function () {
   // console.log(movementsUI);
   console.log(movementsUI);
 });
+*/
+
+// Array Methods Practice
+//1.
+// const bankDepositSum = accounts.map(acc => acc.movements).flat();
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
+
+const bankWithdrawSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov < 0)
+  .reduce((sum, cur) => sum + cur, 0);
+// console.log(bankWithdrawSum);
+
+//2.
+//method 1
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov > 1000).length;
+// console.log(numDeposits1000);
+
+//method 2
+const numDeposits1000 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+console.log(numDeposits1000);
+
+//3.
+const { deposits, withdrawals } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(deposits, withdrawals);
+
+//4. Create function to convert string into Title Case
