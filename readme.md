@@ -256,3 +256,4 @@
 
 - `x.fill(1, 3); //[empty × 3, 1, 1, 1, 1]`
 - fills 1 in the array but from index 3
+- `x.fill(1, 3, 5); `- [empty × 3, 1, 1, empty × 2] - This fills value 1 from index 3 to 4. The final index which in this case is `5` is not factored.
