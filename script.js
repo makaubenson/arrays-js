@@ -821,3 +821,6 @@ console.log(ownersEatTooLittle);
 //"Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
 console.log(`${ownersEatTooMuch.join(' and ')} dogs eat too much!`);
 console.log(`${ownersEatTooLittle.join(' and ')} dogs eat too little!`);
+
+//5. Log to the console whether there is any dog eating EXACTLY the amount of food that is recommended (just true or false)
+console.log(dogs.some(dog => dog.recFood === dog.curFood));
