@@ -827,8 +827,14 @@ console.log(dogs.some(dog => dog.recFood === dog.curFood));
 
 //6. Log to the console whether there is any dog eating an OKAY amount of food (just true or false)
 //current > (recommended * 0.90) && current < (recommended * 1.10).
-console.log(
-  dogs.some(
-    dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1
-  )
-);
+//check EatingOkay function
+const checkEatingOkay = dog =>
+  dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1;
+
+console.log(dogs.some(checkEatingOkay));
+//7. Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
+
+// const dogsEatingOkayAmount = dogs.some(
+//   dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1
+// );
+// console.log(dogsEatingOkayAmount);
