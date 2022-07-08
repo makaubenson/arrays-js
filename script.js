@@ -824,3 +824,11 @@ console.log(`${ownersEatTooLittle.join(' and ')} dogs eat too little!`);
 
 //5. Log to the console whether there is any dog eating EXACTLY the amount of food that is recommended (just true or false)
 console.log(dogs.some(dog => dog.recFood === dog.curFood));
+
+//6. Log to the console whether there is any dog eating an OKAY amount of food (just true or false)
+//current > (recommended * 0.90) && current < (recommended * 1.10).
+console.log(
+  dogs.some(
+    dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1
+  )
+);
