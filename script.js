@@ -792,4 +792,9 @@ console.log(dogs);
 
 //2.
 const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-//8:39
+console.log(dogSarah);
+console.log(
+  `Sarah's dog is eating ${
+    dogSarah.curFood > dogSarah.recFood ? 'Too much' : 'Too Little'
+  } `
+);
