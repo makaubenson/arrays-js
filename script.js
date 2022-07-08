@@ -798,3 +798,21 @@ console.log(
     dogSarah.curFood > dogSarah.recFood ? 'Too much' : 'Too Little'
   } `
 );
+//3.
+//owners of dogs that eat too much
+const ownersEatTooMuch = dogs
+  .filter(function (dog) {
+    return dog.curFood > dog.recFood;
+  })
+  .flatMap(dog => dog.owners);
+// .flat();
+console.log(ownersEatTooMuch);
+
+//owners of dogs that eat too much
+const ownersEatTooLittle = dogs
+  .filter(function (dog) {
+    return dog.curFood < dog.recFood;
+  })
+  .flatMap(dog => dog.owners);
+// .flat();
+console.log(ownersEatTooLittle);
